@@ -421,7 +421,8 @@ border-style: none;
                 cust_order.splice(id, 1);
                 if(localStorage.getItem("cust_order1") != null) {
                     var order_string = localStorage.getItem("cust_order1");
-                    document.getElementById('custom_order').value -= JSON.stringify(cust_order);
+                    var yeah = JSON.stringify(cust_order);
+                    document.getElementById('custom_order').innerHTML -= yeah;
                 }
                 store();
                 displayPosts();
