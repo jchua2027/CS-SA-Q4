@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <title>Constellation Corner</title>
+    <style>
+
+        body {
+
+            font-size: 25px;
+            font-family: "Patrick Hand", cursive;
+            color: #D3755C;
+
+            background-image: url("CSShopBG.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .row {
+
+            text-align: center;
+            justify-content: center;
+
+        }
+
+        header {
+
+            position: fixed;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            background-color: rgb(255, 255, 255);
+            background-clip: border-box;
+
+            filter:drop-shadow(2px 3px 4px rgba(74, 74, 105, 0.411));
+
+        }
+        .container-header {
+            width: 100%;
+            height: auto;
+            top: 0;
+            left: 0;
+            justify-content: space-between;
+            margin: 0;
+            z-index: 1000;
+        }
+
+        button {
+
+            background-color: #ffffff; 
+            color: #F9BC8C;
+
+            border-color: #F9BC8C; 
+            border-radius: 5px;
+
+            text-decoration: none;
+
+        }
+
+        #shard {
+
+            height: 350px;
+            width: 350px;
+        }
+
+        #shield {
+
+            height: 350px;
+            width: 350px;
+
+        }
+
+        #helmet {
+
+            height: 350px;
+            width: 350px;
+        }
+
+        #bomb {
+
+            height: 350px;
+            width: 350px;
+
+        }
+
+        #khopesh {
+
+            height: 350px;
+            width: 350px;
+
+        }
+
+        #scepter {
+
+            height: 350px;
+            width: 350px;
+        }
+
+        a {
+
+        margin: 5px;
+
+        padding: 5px;
+
+        color: #F9BC8C;
+        text-decoration: none;
+
+        border: 2px solid #F9BC8C;
+        border-radius: 10px;;
+
+        }
+
+        a:hover {
+
+        margin: 5px;
+
+        padding: 5px;
+
+        color: #D3755C;
+        text-decoration: none;
+
+        border: 2px solid #D3755C;
+        border-radius: 10px;
+
+        }
+
+        .c1 {
+
+            background-color: #837EBD;
+            color: white;
+
+            border-style: none;
+            
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #itemname1 {
+
+            background-color: #887EBD;
+            color: white;
+
+            border-style: none;
+        }
+
+        .c2 {
+            
+            background-color: #BD7E8D;
+            color: white;
+
+            border-style: none;
+
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #itemname2 {
+
+            background-color: #BD7E8D;
+            color: white;
+ 
+        border-style: none;
+        }
+
+        .c3 {
+            
+            background-color: #7E8EBD;
+            color: white;
+
+            border-style: none;
+
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #itemname3 {
+
+            background-color: #7E8EBD;
+            color: white;
+
+            border-style: none;
+    
+        }
+
+        .c4 {
+            
+            background-color: #BD9C7E;
+            color: white;
+
+            border-style: none;
+
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #itemname4 {
+
+            background-color: #BD9C7E;
+            color: white;
+
+            border-style: none;
+        }
+
+        .c5 {
+            
+            background-color: #7EBDB0;
+            color: white;
+
+            border-style: none;
+
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #itemname5 {
+
+            background-color: #7EBDB0;
+            color: white;
+
+            border-style: none;
+        }
+
+        .c6 {
+            
+            background-color: #837EBD;
+            color: white;
+
+            border-style: none;
+
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #itemname6 {
+
+            background-color: #837EBD;
+            color: white;
+
+            border-style: none;
+        }
+
+        .col-sm-2 {
+            
+            width: 400px;
+            height: 550px;
+
+        }
+
+        .c1 h4, .c2 h4, .c3 h4, .c4 h4, .c5 h4, .c6 h4 {
+
+            font-size: 25px;
+
+        }
+
+        #itemcost1, #itemcost2, #itemcost3, #itemcost4, #itemcost5, #itemcost6 {
+
+            font-size: 25px;
+
+        }
+
+        .btn {
+
+            font-size: 25px;
+
+        }
+
+        .card-body {
+
+            font-size: 25px;
+
+        }
+
+        .card-body h3{
+
+            font-size: 30px;
+
+        }
+
+        #UserName, #UserAddress, #UserEmail {
+
+            font-size: 30px;
+
+        }
+
+        #ListTitle {
+
+            font-size: 50px;
+
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <header class="container-header">
+
+        <div class="row">
+        <div class="col-sm-12">
+
+        <img src="HeaderShop.svg" alt="HeaderShop">
+
+        <br>
+
+        <a href="SA_Balingkilat_AboutPage.html"> About the Company </a>
+        <a href="index.html"> Moonlight Menagerie </a>
+        <a href="SA_Balingkilat_Supper.html"> Starlight Supper </a>
+        <a href="SA_Balingkilat_Planet.html"> Planetary Protection </a>
+        <a href="SA_Balingkilat_Trinkets.html"> Taurus Trinkets </a>
+
+        </div>
+        </div>
+
+    </header>
+
+<div class="container">
+    <br><br><br><br><br><br>
+
+    <img src="HeaderCrew.svg" alt="HeaderCrew" id="crew">
+
+    <br><br>
+
+<div class="row">
+
+
+    <div class="col-sm-2">
+        <div class="card mb-3">
+        <div class="card-body">
+
+            <div class="c1">
+
+            <h4 id="itemname1" class="form-control">Josh Chua</h4>  
+            
+            <img src ="JoshP.svg" alt="Synastry Shard" id="shard">
+
+            </div>
+
+
+            <h4 id="itemcost1" class="form-control">Main Coder, coded the fuctionality of the Website <br> & <br> pulled an all nighter</h4> 
+
+        </div>
+        </div>
+
+
+
+    </div>
+    <div class="col-sm-2">
+        <div class="card mb-3">
+        <div class="card-body">
+
+            <div class="c2">
+
+            <h4 id="itemname2" class="form-control">Brenice David</h4>
+
+            <img src ="BreniceP.svg" alt="Saturn's Shield" id="shield">
+
+            </div>
+
+            <h4 id="itemcost2" class="form-control"> CSS/Validate <br> Drew the items in <br> Moonlight Menagerie <br> & Taurus Trinkets </h4>
+
+        </div>
+        </div>
+
+
+
+    </div>
+    <div class="col-sm-2">
+        <div class="card mb-3">
+        <div class="card-body">
+
+            <div class="c3">
+
+            <h4 id="itemname3" class="form-control">Bea Tecson</h4>
+        
+            <img src ="BeaP.svg" alt="Martian Helmet" id="helmet">
+
+            <h4 id="itemcost3" class="form-control"> CSS/Validate <br> Drew the items in <br> Starlight Supper <br> & Planetary Protection </h4>
+
+            </div>
+
+        </div>
+        </div>
+
+    </div>
+
+</div>
+
+<br><br><br><br><br><br>
+
+<img src="HeaderRules.svg" alt="HeaderRules" id="rules">
+
+<br><br>
+
+<div class="row">
+    <div class="col-sm-8">
+        <div class="card mb-3">
+            <div class="card-body">
+
+                <h3>1. Each category has it's own designated rocket, so if you want to order from multiple categories you have to order them mulitple times <br><br> 2. Our currency will be in Philippine Peso since the Aliens crashed in Lily Hill!! They need money to survive</h3>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>    
+
+<br><br><br><br><br>
+
+<img src="HeaderRef.svg" alt="HeaderRef" id="ref">
+
+<br><br>
+
+<div class="row">
+    <div class="col-sm-8">
+        <div class="card mb-3">
+            <div class="card-body">
+
+                <h3>https://picrew.me/en/image_maker/1936010 <br><br> https://www.w3schools.com/js/js_json_intro.asp <br><br> https://www.w3schools.com/jsref/jsref_number.asp <br><br> https://www.w3schools.com/jsref/jsref_splice.asp <br><br> https://www.w3schools.com/js/js_array_methods.asp </h3>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>    
+
+</div>
+
+
+          
+</body>
+</html>

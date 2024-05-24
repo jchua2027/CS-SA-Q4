@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <title>Constellation Corner</title>
+    <style>
+
+        body {
+
+            font-size: 25px;
+            font-family: "Patrick Hand", cursive;
+            color: #D3755C;
+
+            background-image: url("CSShopBG.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+        }
+
+        .row {
+
+            text-align: center;
+            justify-content: center;
+
+        }
+
+        header {
+
+            position: fixed;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            background-color: rgb(255, 255, 255);
+            background-clip: border-box;
+
+            filter:drop-shadow(2px 3px 4px rgba(74, 74, 105, 0.411));
+        }
+        .container-header {
+            width: 100%;
+            height: auto;
+            top: 0;
+            left: 0;
+            justify-content: space-between;
+            margin: 0;
+            z-index: 1000;
+        }
+
+        button {
+
+            background-color: #ffffff; 
+            color: #F9BC8C;
+
+            border-color: #F9BC8C; 
+            border-radius: 5px;
+
+            text-decoration: none;
+
+        }
+
+        #bat {
+
+            height: 400px;
+            width: 400px;
+            padding-bottom: 4px;
+        }
+
+        #bunny {
+
+            height: 400px;
+            width: 400px;
+            padding-bottom: 4px;
+
+        }
+
+        #dog {
+
+        height: 400px;
+        width: 400px;
+        padding-bottom: 4px;
+
+        }
+
+        #fox {
+
+        height: 400px;
+        width: 400px;
+        padding-bottom: 4px;
+
+        }
+
+        #cat {
+
+        height: 400px;
+        width: 400px;
+        padding-bottom: 4px;
+
+        }
+
+        #dragon {
+
+        height: 400px;
+        width: 400px;
+        padding-bottom: 4px;
+
+        }
+
+        a {
+
+        margin: 5px;
+
+        padding: 5px;
+
+        color: #F9BC8C;
+        text-decoration: none;
+
+        border: 2px solid #F9BC8C;
+        border-radius: 10px;;
+
+        }
+
+        a:hover {
+
+        margin: 5px;
+
+        padding: 5px;
+
+        color: #D3755C;
+        text-decoration: none;
+
+        border: 2px solid #D3755C;
+        border-radius: 10px;
+
+        }
+
+        .c1 {
+            
+            background-color: #887EBD;
+            color: white;
+
+            border-style: none;
+
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #itemname1, #but1 {
+
+            background-color: #887EBD;
+            color: white;
+
+            border-style: none;
+        }
+
+        .c2 {
+            
+            background-color: #7EB5BD;
+            color: white;
+
+            border-style: none;
+
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #itemname2, #but2 {
+
+            background-color: #7EB5BD;
+            color: white;
+ 
+        border-style: none;
+        }
+
+        .c3 {
+            
+            background-color: #BD9C7E;
+            color: white;
+
+            border-style: none;
+
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #itemname3, #but3 {
+
+            background-color: #BD9C7E;
+            color: white;
+
+            border-style: none;
+    
+        }
+
+        .c4 {
+            
+            background-color: #BD7E7E;
+            color: white;
+
+            border-style: none;
+
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #itemname4, #but4 {
+
+            background-color: #BD7E7E;
+            color: white;
+
+            border-style: none;
+        }
+
+        .c5 {
+            
+            background-color: #7EBDB0;
+            color: white;
+
+            border-style: none;
+
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #itemname5, #but5 {
+
+            background-color: #7EBDB0;
+            color: white;
+
+            border-style: none;
+        }
+
+        .c6 {
+            
+            background-color: #7E8EBD;
+            color: white;
+
+            border-style: none;
+
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #itemname6, #but6 {
+
+            background-color: #7E8EBD;
+            color: white;
+
+            border-style: none;
+        }
+
+        #subbut {
+
+            background-color: #F9BC8C;
+            color: white;
+
+            border-style: none;
+        }
+
+        .col-sm-2 {
+
+            width: 500px;
+            height: 750px;
+        
+        }
+        
+        .c1 h4, .c2 h4, .c3 h4, .c4 h4, .c5 h4, .c6 h4 {
+
+            font-size: 50px;
+
+        }
+
+        #itemcost1, #itemcost2, #itemcost3, #itemcost4, #itemcost5, #itemcost6 {
+    
+            font-size: 50px;
+
+        }
+
+        .btn {
+    
+            font-size: 30px;
+
+        }
+
+        .card-body {
+    
+            font-size: 40px;
+
+        }
+
+        .card-body h3{
+    
+            font-size: 50px;
+
+        }
+
+        #UserName, #UserAddress, #UserEmail {
+    
+            font-size: 30px;
+
+        }
+
+        #ListTitle {
+    
+            font-size: 50px;
+            color: #fff;
+
+        }
+
+
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <header class="container-header">
+
+        <div class="row">
+        <div class="col-sm-12">
+
+        <img src="HeaderShop.svg" alt="HeaderShop">
+
+        <br>
+
+        <a href="SA_Balingkilat_AboutPage.html"> About the Company </a>
+        <a href="index.html"> Moonlight Menagerie </a>
+        <a href="SA_Balingkilat_Supper.html"> Starlight Supper </a>
+        <a href="SA_Balingkilat_Planet.html"> Planetary Protection </a>
+        <a href="SA_Balingkilat_Trinkets.html"> Taurus Trinkets </a>
+
+        </div>
+        </div>
+
+    </header>
+
+<div class="container">
+    <br><br><br><br><br><br>
+
+<div class="row">
+
+
+    <div class="col-sm-2">
+        <div class="card mb-3">
+        <div class="card-body">
+
+            <div class="c1">
+
+            <h4 id="itemname1" class="form-control">Twilight Bat</h4>  
+
+            <img src ="Twilight_Bat.png" alt="Twilight Bat" id="bat">
+
+            </div>
+
+            <h4 id="itemcost1" class="form-control">8595</h4> 
+
+            <button class="btn btn-primary" onclick="addPost1()" id="but1">Add to Cart</button>   
+        </div>
+        </div>
+
+
+
+    </div>
+    <div class="col-sm-2">
+        <div class="card mb-3">
+        <div class="card-body">
+
+            <div class="c2">
+
+            <h4 id="itemname2" class="form-control">Spectral Bunny</h4>
+
+            <img src ="Spectral_Bunny.png" alt="Spectral Bunny" id="bunny">
+
+            </div>
+        
+
+            <h4 id="itemcost2" class="form-control">4800</h4>
+
+
+            <button class="btn btn-primary" onclick="addPost2()" id="but2">Add to Cart</button>   
+        </div>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-sm-2">
+        <div class="card mb-3">
+        <div class="card-body">
+
+            <div class="c3">
+
+            <h4 id="itemname3" class="form-control">Solar Dog</h4>
+
+            <img src ="Solar_Dog.png" alt="Solar Dog" id="dog">
+
+            </div>
+
+            <h4 id="itemcost3" class="form-control">6559</h4>
+
+            <button class="btn btn-primary" onclick="addPost3()" id="but3">Add to Cart</button>   
+
+        </div>
+        </div>
+
+    </div>
+   
+
+    <div class="col-sm-2">
+        <div class="card mb-3">
+        <div class="card-body">
+
+            <div class="c4">
+
+            <h4 id="itemname4" class="form-control">Scarlet Fox</h4>
+
+            <img src ="Scarlet_Fox.png" alt="Scarlet Fox" id="fox">
+
+            </div>
+
+            <h4 id="itemcost4" class="form-control">8900</h4>
+            <button class="btn btn-primary" onclick="addPost4()" id="but4">Add to Cart</button>   
+        </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-sm-2">
+        <div class="card mb-3">
+        <div class="card-body">
+
+            <div class="c5">
+
+            <h4 id="itemname5" class="form-control">Lunar Cat</h4>
+
+            <img src ="Lunar_Cat.png" alt="Lunar Cat" id="cat">
+
+            </div>
+
+            <h4 id="itemcost5" class="form-control">6450</h4>
+            <button class="btn btn-primary" onclick="addPost5()" id="but5">Add to Cart</button>   
+        </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-sm-2">
+        <div class="card mb-3">
+        <div class="card-body">
+
+            <div class="c6">
+
+            <h4 id="itemname6" class="form-control">Celestial Dragon</h4>
+
+            <img src ="Celestial_Dragon.png" alt="Celestial Dragon" id="dragon">
+
+            </div>
+            
+            
+            <h4 id="itemcost6" class="form-control">10000</h4> 
+            <button class="btn btn-primary" onclick="addPost6()" id="but6">Add to Cart</button>   
+        </div>
+        </div>
+
+</div>
+
+
+
+
+<div class="row">
+        <div class="col-sm-8">
+        <h1>&nbsp;</h1>
+        <form action="http://sirjm.infinityfreeapp.com/checkout.php" method="GET">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h3>&nbsp;&nbsp;User Information</h3>
+                <label for="UserName">Name</label>
+                <input type="text" name="cust_name" id="UserName" class="form-control" placeholder="Input Name Here"><br>
+                <label for="UserEmail">Email</label>
+                <input type="text" name="cust_email" id="UserEmail" class="form-control" placeholder="Input Email Here"><br>
+                <label for="UserAddress">Delivery Address</label>
+                <input type="text" name="cust_addr" id="UserAddress" class="form-control" placeholder="Input Delivery Address Here">
+                <input type="hidden" id="custom_order" name="cust_order" value=" ">
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+                <input type="submit" value="Submit" class="btn btn-primary" onclick="dothis()" id="subbut">
+            </div>
+        </div>
+        </form>
+</div>
+        <div class="row">
+            <div class="col-sm-4">
+            <h3 id="ListTitle">THE CART</h3>
+            <ul id="ulNeworder" class="list-group">
+
+            </ul>
+            </div>
+    </div>
+</div>
+</div>
+
+</div>
+        <script>
+            var CostSum = 0;
+            var cust_order = [];
+            function displayPosts() {
+                document.getElementById('ulNeworder').innerHTML = '<li class="list-group-item"><h5 class="mb-0">Total: PHP ' +CostSum+'</h5></li>';
+                for(var i=0; i<cust_order.length; i++) {
+                    document.getElementById('ulNeworder').innerHTML += '<li class="list-group-item"><h5 class="mb-0">'+cust_order[i].prod_name+'<br>'+Number(cust_order[i].prod_price)+'</h5><button onclick="Delete('+i+')">Delete</button></li>';
+                }
+
+            }
+            function dothis() {
+                if(localStorage.getItem("cust_order1") != null) {
+                    var order_string = localStorage.getItem("cust_order1");
+                    var yeah = JSON.stringify(cust_order);
+                    document.getElementById('custom_order').value += yeah;
+                }
+            }
+            function Delete(id) {
+                CostSum -= Number(cust_order[id].prod_price);
+                cust_order.splice(id, 1);
+                if(localStorage.getItem("cust_order1") != null) {
+                    var order_string = localStorage.getItem("cust_order1");
+                    document.getElementById('custom_order').value -= JSON.stringify(cust_order);
+                }
+                store();
+                displayPosts();
+                }  
+            function addPost1() {
+                CostSum += Number(8595);
+                var Name = document.getElementById('itemname1').innerHTML;
+                var CostNum = document.getElementById('itemcost1').innerHTML;
+                var order_info = {
+                    prod_name: Name,
+                    prod_price: Number(CostNum),
+                }
+                cust_order.push(order_info);
+                displayPosts();
+                document.getElementById('itemname1').value= '1';
+                document.getElementById('itemcost1').value = '2'; 
+                store();
+            }
+            function addPost2() {
+                CostSum += Number(4800);
+                var Name = document.getElementById('itemname2').innerHTML;
+                var CostNum = document.getElementById('itemcost2').innerHTML;
+                var order_info = {
+                    prod_name: Name,
+                    prod_price: Number(CostNum),
+                }
+                cust_order.push(order_info);
+                displayPosts();
+                document.getElementById('itemname2').value = '';
+                document.getElementById('itemcost2').value = '';
+                store();
+            }
+            function addPost3() {
+                CostSum += Number(6559);
+                var Name = document.getElementById('itemname3').innerHTML;
+                var CostNum = document.getElementById('itemcost3').innerHTML;
+                var order_info = {
+                    prod_name: Name,
+                    prod_price: Number(CostNum),
+                }
+                cust_order.push(order_info);
+                displayPosts();
+                document.getElementById('itemname3').value = '';
+                document.getElementById('itemcost3').value = '';
+                store();
+            }
+            function addPost4() {
+                CostSum += Number(8900);
+                var Name = document.getElementById('itemname4').innerHTML;
+                var CostNum = document.getElementById('itemcost4').innerHTML;
+                var order_info = {
+                    prod_name: Name,
+                    prod_price: Number(CostNum),
+                }
+                cust_order.push(order_info);
+                displayPosts();
+                document.getElementById('itemname4').value = '';
+                document.getElementById('itemcost4').value = '';
+                store();
+            }
+            function addPost5() {
+                CostSum += Number(6450);
+                var Name = document.getElementById('itemname5').innerHTML;
+                var CostNum = document.getElementById('itemcost5').innerHTML;
+                var order_info = {
+                    prod_name: Name,
+                    prod_price: Number(CostNum),
+                }
+                cust_order.push(order_info);
+                displayPosts();
+                document.getElementById('itemname5').value = '';
+                document.getElementById('itemcost5').value = '';
+                store();
+            }
+            function addPost6() {
+                CostSum += Number(10000);
+                var Name = document.getElementById('itemname6').innerHTML;
+                var CostNum = document.getElementById('itemcost6').innerHTML;
+                var order_info = {
+                    prod_name: Name,
+                    prod_price: Number(CostNum),
+                }
+                cust_order.push(order_info);
+                displayPosts();
+                document.getElementById('itemname6').value = '';
+                document.getElementById('itemcost6').value = '';
+                store();
+            }
+            function store() {
+                localStorage.setItem("cust_order1",JSON.stringify(cust_order));
+            }
+            function getPosts() {
+            }
+            getPosts();
+        </script>   
+</body>
+</html>
